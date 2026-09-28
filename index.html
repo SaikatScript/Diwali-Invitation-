@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shubh Deepavali — Festival of Lights Invitation</title>
+  <meta name="description" content="You are warmly invited to celebrate Diwali, the Festival of Lights, with the Pramanik family. Sunday, 8 November 2026.">
+  <meta name="theme-color" content="#070a18">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to invitation</a>
+
+  <!-- Ambient fireworks + embers. Decorative only. -->
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- Background festive song (original loop; replaceable — see audio/README.txt) -->
+  <audio id="bgSong" src="audio/diwali-festive-loop.mp3" loop preload="auto"></audio>
+
+  <!-- Music toggle -->
+  <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false" aria-label="Play festive music">
+    <svg class="ic ic-on" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M4 9.4v5.2c0 .5.4.9.9.9h3l4.6 3.5c.4.3 1 .1 1-.4V5.4c0-.5-.6-.7-1-.4L7.9 8.5h-3c-.5 0-.9.4-.9.9z" fill="currentColor"/>
+      <path d="M15.2 9.2a4 4 0 0 1 0 5.6M17.6 6.8a7.4 7.4 0 0 1 0 10.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <svg class="ic ic-off" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M4 9.4v5.2c0 .5.4.9.9.9h3l4.6 3.5c.4.3 1 .1 1-.4V5.4c0-.5-.6-.7-1-.4L7.9 8.5h-3c-.5 0-.9.4-.9.9z" fill="currentColor" opacity=".55"/>
+      <path d="M15.5 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <span class="music-label" aria-hidden="true">Music</span>
+  </button>
+
+  <!-- ══════════ CINEMATIC INTRO (first 10 seconds) ══════════ -->
+  <div id="intro" class="intro" role="dialog" aria-modal="true" aria-labelledby="introTitle">
+    <div class="intro-inner">
+      <p class="intro-kicker">You are warmly invited</p>
+
+      <div class="intro-diya" aria-hidden="true">
+        <span class="diya-halo"></span>
+        <span class="diya-flame"><span class="flame-core"></span></span>
+        <span class="diya-wick"></span>
+        <span class="diya-bowl"><span class="diya-glow"></span></span>
+      </div>
+
+      <h1 id="introTitle" class="intro-title" aria-label="Shubh Deepavali">
+        <span aria-hidden="true" class="title-word">
+          <span>S</span><span>h</span><span>u</span><span>b</span><span>h</span>
+        </span>
+        <span aria-hidden="true" class="title-word title-word--gold">
+          <span>D</span><span>e</span><span>e</span><span>p</span><span>a</span><span>v</span><span>a</span><span>l</span><span>i</span>
+        </span>
+      </h1>
+
+      <p class="intro-sub">A Festival of Lights celebration with the Pramanik family</p>
+      <p class="intro-date">Sunday, 8 November 2026 &middot; Kayemba, Birbhum</p>
+
+      <button id="enterBtn" class="btn btn-gold intro-cta" type="button">
+        Light the Diya &amp; Enter
+        <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M5 12h13m-5-6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ══════════ HERO ══════════ -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <p class="eyebrow reveal">Shubh Deepavali &middot; Festival of Lights</p>
+      <h1 class="hero-title reveal" id="mainHeading" tabindex="-1">
+        <span class="line">Light over darkness,</span>
+        <span class="line line--gold">joy over everything.</span>
+      </h1>
+      <p class="hero-copy reveal">
+        With diyas lit and hearts full, we invite you to our home for an evening of
+        prayer, music, sweets and togetherness. Come as you are — leave glowing.
+      </p>
+
+      <div class="hero-meta reveal" role="list" aria-label="Event essentials">
+        <span role="listitem">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 9.5h17M8 3v3.5M16 3v3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          Sunday, 8 Nov 2026
+        </span>
+        <span role="listitem">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          6:30 PM onwards
+        </span>
+        <span role="listitem">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+          Kayemba, Birbhum
+        </span>
+      </div>
+
+      <div class="hero-actions reveal">
+        <a class="btn btn-gold" href="#invitation">View Invitation</a>
+        <button class="btn btn-ghost" id="calBtn" type="button">Add to Calendar</button>
+      </div>
+
+      <!-- Diya row -->
+      <div class="diya-row" aria-hidden="true">
+        <div class="diya diya--sm"><span class="diya-halo"></span><span class="diya-flame"><span class="flame-core"></span></span><span class="diya-wick"></span><span class="diya-bowl"></span></div>
+        <div class="diya diya--lg"><span class="diya-halo"></span><span class="diya-flame"><span class="flame-core"></span></span><span class="diya-wick"></span><span class="diya-bowl"></span></div>
+        <div class="diya diya--sm"><span class="diya-halo"></span><span class="diya-flame"><span class="flame-core"></span></span><span class="diya-wick"></span><span class="diya-bowl"></span></div>
+      </div>
+
+      <a class="scroll-cue" href="#invitation" aria-label="Scroll to invitation">
+        <span></span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ══════════ INVITATION CARD ══════════ -->
+    <section class="section" id="invitation" aria-labelledby="invTitle">
+      <div class="section-head reveal">
+        <p class="eyebrow">The Invitation</p>
+        <h2 id="invTitle">An evening crafted for you</h2>
+        <div class="divider" aria-hidden="true">
+          <svg viewBox="0 0 220 24"><g fill="none" stroke="#c9a24a" stroke-width="1.4"><path d="M0 12h72M148 12h72"/><circle cx="110" cy="12" r="3.2" fill="#c9a24a" stroke="none"/><circle cx="98" cy="12" r="1.6" fill="#c9a24a" stroke="none"/><circle cx="122" cy="12" r="1.6" fill="#c9a24a" stroke="none"/><path d="M86 12l6-6 6 6-6 6zM128 12l6-6 6 6-6 6z"/></g></svg>
+        </div>
+      </div>
+
+      <article class="invite-card reveal" aria-label="Diwali invitation card">
+        <span class="card-corner tl" aria-hidden="true"></span>
+        <span class="card-corner tr" aria-hidden="true"></span>
+        <span class="card-corner bl" aria-hidden="true"></span>
+        <span class="card-corner br" aria-hidden="true"></span>
+
+        <div class="monogram" aria-hidden="true">P</div>
+        <p class="card-kicker">With the blessings of our elders</p>
+        <h3 class="card-family">The Pramanik Family</h3>
+        <p class="card-request">request the honour of your presence at</p>
+        <p class="card-event">Diwali Celebration &amp; Lakshmi Puja</p>
+        <p class="card-line">An evening of light, prayer, music and festive dining</p>
+
+        <dl class="card-details">
+          <div>
+            <dt>Date</dt>
+            <dd>Sunday, 8 November 2026</dd>
+          </div>
+          <div>
+            <dt>Time</dt>
+            <dd>Lakshmi Puja 6:30 PM &middot; Dinner 8:00 PM</dd>
+          </div>
+          <div>
+            <dt>Venue</dt>
+            <dd>Family Residence, Kayemba,<br>Birbhum, West Bengal 731241</dd>
+          </div>
+        </dl>
+
+        <div class="card-actions">
+          <a class="btn btn-gold btn-sm" href="https://maps.app.goo.gl/9DEkysSqcpTWJm2Q6" target="_blank" rel="noopener">Open in Maps</a>
+          <a class="btn btn-ghost btn-sm" href="tel:+918918766749">Call Host</a>
+        </div>
+        <p class="card-foot">Kindly arrive by 6:15 PM &middot; Traditional attire welcome</p>
+      </article>
+
+      <!-- Countdown -->
+      <div class="countdown reveal" role="timer" aria-live="off" aria-label="Countdown to Diwali">
+        <p class="count-label" id="countLabel">Until the first diya is lit</p>
+        <div class="count-grid">
+          <div class="count-box"><span class="count-num" id="cdD">00</span><span class="count-unit">Days</span></div>
+          <div class="count-box"><span class="count-num" id="cdH">00</span><span class="count-unit">Hours</span></div>
+          <div class="count-box"><span class="count-num" id="cdM">00</span><span class="count-unit">Minutes</span></div>
+          <div class="count-box"><span class="count-num" id="cdS">00</span><span class="count-unit">Seconds</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ EVENING FLOW ══════════ -->
+    <section class="section" id="evening" aria-labelledby="eveTitle">
+      <div class="section-head reveal">
+        <p class="eyebrow">The Evening</p>
+        <h2 id="eveTitle">Three moments, one glow</h2>
+        <p class="section-sub">A gentle flow — no rush, no formalities. Stay for all of it if you can.</p>
+      </div>
+      <div class="cards">
+        <article class="lux-card reveal">
+          <div class="lux-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><g fill="none" stroke="#e8c66a" stroke-width="2" stroke-linecap="round"><path d="M14 26h20v4a10 6.5 0 0 1-20 0z"/><path d="M11 22h26M19 14a5 5 0 0 1 10 0z"/><path d="M24 14V8"/><circle cx="24" cy="6" r="1.6" fill="#e8c66a" stroke="none"/></g></svg>
+          </div>
+          <p class="lux-time">6:30 PM</p>
+          <h3>Lakshmi Puja</h3>
+          <p>We begin with prayer — diyas, flowers and a short invocation for prosperity and peace. All are welcome to join or simply witness.</p>
+        </article>
+        <article class="lux-card reveal">
+          <div class="lux-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><g fill="none" stroke="#e8c66a" stroke-width="2" stroke-linecap="round"><circle cx="24" cy="24" r="13"/><path d="M24 11v26M11 24h26M15 15l18 18M33 15L15 33" opacity=".55"/></g></svg>
+          </div>
+          <p class="lux-time">7:30 PM</p>
+          <h3>Sweets &amp; Togetherness</h3>
+          <p>Homemade sweets, savouries and chai under the lights. Meet old friends, make new ones — the courtyard stays lit all evening.</p>
+        </article>
+        <article class="lux-card reveal">
+          <div class="lux-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><g fill="none" stroke="#e8c66a" stroke-width="2" stroke-linecap="round"><path d="M24 6v6M10 12l4 4M38 12l-4 4M8 28c4-1 6-3 7-7M40 28c-4-1-6-3-7-7M24 22c-4 3-6 7-6 12h12c0-5-2-9-6-12z"/><path d="M18 38h12"/></g></svg>
+          </div>
+          <p class="lux-time">8:30 PM</p>
+          <h3>Sparklers &amp; Dinner</h3>
+          <p>A short, safe sparkler moment for children, followed by a festive family dinner. Fireworks viewed — not fired — from the terrace.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════ VENUE ══════════ -->
+    <section class="section" id="venue" aria-labelledby="venTitle">
+      <div class="section-head reveal">
+        <p class="eyebrow">Getting There</p>
+        <h2 id="venTitle">The venue</h2>
+      </div>
+      <div class="venue-grid">
+        <div class="venue-card reveal">
+          <h3>Family Residence</h3>
+          <address>
+            Kayemba, Margram,<br>
+            Birbhum, West Bengal 731241
+          </address>
+          <p class="venue-note">Parking available near the village road. Look for the marigold torans and the row of diyas at the gate.</p>
+          <div class="venue-actions">
+            <a class="btn btn-gold btn-sm" href="https://maps.app.goo.gl/9DEkysSqcpTWJm2Q6" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+        <div class="venue-card reveal">
+          <h3>Good to know</h3>
+          <ul class="fine-list">
+            <li>Puja begins sharp at 6:30 PM — please arrive by 6:15 PM.</li>
+            <li>Children are most welcome; sparklers are supervised.</li>
+            <li>For help finding us, call any number below.</li>
+          </ul>
+          <div class="contact-list">
+            <a href="tel:+918918766749"><span>Rounak</span><span>+91 89187 66749</span></a>
+            <a href="tel:+919749785571"><span>Saikat</span><span>+91 97497 85571</span></a>
+            <a href="tel:+919733435097"><span>Suren / Samapti</span><span>+91 97334 35097</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ LIGHT A DIYA (interactive) ══════════ -->
+    <section class="section" id="light-diya" aria-labelledby="diyaTitle">
+      <div class="section-head reveal">
+        <p class="eyebrow">Your Turn</p>
+        <h2 id="diyaTitle">Light a diya</h2>
+        <p class="section-sub" id="diyaHint">Step 1 — tap the lighter to pick up its flame. Step 2 — tap a diya to light it.</p>
+      </div>
+      <div class="diya-play reveal">
+        <button id="lighter" class="lighter" type="button" aria-pressed="false" aria-label="Pick up the lighter flame">
+          <span class="lighter-flame" aria-hidden="true"><span class="flame-core"></span></span>
+          <svg viewBox="0 0 64 96" aria-hidden="true" focusable="false">
+            <rect x="14" y="34" width="36" height="56" rx="9" fill="#2b3358" stroke="#e8c66a" stroke-width="2"/>
+            <rect x="14" y="52" width="36" height="20" fill="#e8c66a" opacity=".16"/>
+            <rect x="20" y="18" width="24" height="18" rx="3" fill="#9aa2c8" stroke="#e8c66a" stroke-width="1.6"/>
+            <circle cx="32" cy="27" r="5" fill="#4a5478" stroke="#e8c66a" stroke-width="1.6"/>
+            <rect x="27" y="8" width="10" height="12" rx="2" fill="#c6ccea"/>
+          </svg>
+          <span class="lighter-label">Lighter</span>
+        </button>
+        <div class="diya-targets" role="group" aria-label="Diyas waiting to be lit">
+          <button class="diya-btn" type="button" data-diya="1" aria-label="Light diya 1">
+            <span class="diya" aria-hidden="true"><span class="diya-halo"></span><span class="diya-flame"><span class="flame-core"></span></span><span class="diya-wick"></span><span class="diya-bowl"></span></span>
+          </button>
+          <button class="diya-btn" type="button" data-diya="2" aria-label="Light diya 2">
+            <span class="diya" aria-hidden="true"><span class="diya-halo"></span><span class="diya-flame"><span class="flame-core"></span></span><span class="diya-wick"></span><span class="diya-bowl"></span></span>
+          </button>
+          <button class="diya-btn" type="button" data-diya="3" aria-label="Light diya 3">
+            <span class="diya" aria-hidden="true"><span class="diya-halo"></span><span class="diya-flame"><span class="flame-core"></span></span><span class="diya-wick"></span><span class="diya-bowl"></span></span>
+          </button>
+        </div>
+        <p class="diya-count" id="diyaCount" aria-live="polite">0 of 3 diyas lit</p>
+      </div>
+    </section>
+
+    <!-- ══════════ WISHES ══════════ -->
+    <section class="section wishes" aria-labelledby="wishTitle">
+      <div class="wishes-inner reveal">
+        <div class="mini-diya" aria-hidden="true"><span class="diya-halo"></span><span class="diya-flame"><span class="flame-core"></span></span><span class="diya-wick"></span><span class="diya-bowl"></span></div>
+        <h2 id="wishTitle">May this Diwali fill your home with light</h2>
+        <p>Health, prosperity and quiet joy — to you and everyone you love.<br>We cannot wait to celebrate with you.</p>
+        <p class="signature">— Rounak, Kakoli &amp; Family</p>
+        <button class="btn btn-gold" id="burstBtn" type="button">Light a Firework</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Shubh Deepavali &middot; 8 November 2026 &middot; With love from Kayemba</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
